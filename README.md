@@ -13,7 +13,7 @@ Nápad jsem ukradl od rekreačního programátora a streamera [Tsoding](https://
 ## Dodatečné informace
 Aktuální implementace je velmi pomalá. Pro její zrychlení jsem použil měřítko,
 abych snížil počet pixelů. Největším bottleneckem je aktuálně 
-pygame.Surface.set_at(), který je relativně pomalýa je velmi často volán. 
+[pygame.Surface.set_at()](https://www.pygame.org/docs/ref/surface.html#pygame.Surface.set_at), který je relativně pomalýa je velmi často volán. 
 Dalším faktorem je samotný algoritmus, který zvlášt vypočítává barvu
 pro každý pixel a přiřazuje ji po jednom. Avšak jako první prototyp to zatím postačí.
 
@@ -58,7 +58,7 @@ Idea stolen from recreational programmer and streamer [Tsoding](https://www.yout
 
 ## Aditional info
 This implementation is very slow. To speed up things I've used image
-scaling. The biggest bottleneck now is pygame.Surface.set_at() function.
+scaling. The biggest bottleneck now is [pygame.Surface.set_at()](https://www.pygame.org/docs/ref/surface.html#pygame.Surface.set_at) function.
 This function isn't the fastest and you are not supposed to call it 10 of
 thousands of times. The other slow thing is the algorithm alone. It is 
 computing for every pixel on screen distance from every point.
@@ -93,4 +93,9 @@ Coded on Windows 10.
 ```
 python main.py
 ```
+
+# Ukázky / screenshots
+
+![Alt text](./screenshot.png?raw=true "Screenshot 1")
+
 
