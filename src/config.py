@@ -9,6 +9,9 @@ class Config_data():
     SCREEN_HEIGHT: int
     SCREEN_DIMS: tuple[int, int]
     
+    SCREEN_SCALE: float
+    SCREEN_SCALE_DIMS: tuple[int, int]
+    
     BGCOLOR: tuple[int, int, int]
 
 
@@ -100,7 +103,7 @@ def init_cfg(default: bool = False) -> Config_data:
             n += count_values(config[key])
         return n
 
-    assert count_values(config["DEFAULT"]) == 4, "Unexpected config lenght."
+    assert count_values(config["DEFAULT"]) == 5, "Unexpected config lenght."
     
     config_data = Config_data()
     
@@ -109,6 +112,12 @@ def init_cfg(default: bool = False) -> Config_data:
     config_data.SCREEN_HEIGHT: int = load_config(["int"], ["screen", "height"],default)
     config_data.SCREEN_DIMS = (config_data.SCREEN_WIDTH, config_data.SCREEN_HEIGHT)
     
+    config_data.SCREEN_SCALE: float = load_config(["float"], ["screen", "scale"],  default)
+    config_data.SCREEN_SCALE_DIMS = (
+        int(config_data.SCREEN_WIDTH * config_data.SCREEN_SCALE), int(config_data.SCREEN_HEIGHT * config_data.SCREEN_SCALE))
+    
     config_data.BGCOLOR: tuple = load_config(["tuple", "int"], ["background_color"],  default)
+    
+    
     
     return config_data
