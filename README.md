@@ -114,5 +114,6 @@ python main.py
 # Ukázky / screenshots
 
 ![screenshot1](/screenshot1.png?raw=true "Screenshot 1")
+![screenshot2](/screenshot2.png?raw=true "Screenshot 2 - many points")
 
 
