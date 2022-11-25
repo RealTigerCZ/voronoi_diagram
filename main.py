@@ -4,7 +4,8 @@ import time
 def main():
     screen:pygame.Surface = pygame.display.set_mode(cfg_data.SCREEN_SCALE_DIMS)
     
-    surface = generate_surface()
+    surface = generate_surface(Algorithm.D_BUFFER)
+    last_surface = surface
     surface = pygame.transform.scale(surface, cfg_data.SCREEN_SCALE_DIMS)
     
     clock = pygame.time.Clock()
@@ -20,7 +21,9 @@ def main():
                 print("Generating surface")
                 start = time.time()
                 
-                surface = generate_surface()
+                surface = generate_surface(
+                    Algorithm.D_BUFFER, last=last_surface)
+                last_surface = surface
                 surface = pygame.transform.scale(surface, cfg_data.SCREEN_SCALE_DIMS)
                 
                 end = time.time()
