@@ -28,8 +28,11 @@ def main():
                 
                 end = time.time()
                 print(f"Generation took: {end - start}s")
-                
-                               
+            
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_s:
+                    save_screenhot(screen)
+                    
         screen.blit(surface, (0, 0))
         
         for point in points:
@@ -38,6 +41,15 @@ def main():
         pygame.display.update()
         clock.tick(30)
 
+def save_screenhot(surface: pygame.Surface):
+    import os, time
+    
+    if not os.path.exists(os.path.join(os.path.dirname(__file__), r'screenshots')):
+        os.makedirs("screenshots")
+    
+    name = time.strftime("Screenshot %d-%m-%y_%H-%M-%S.png")
+    pygame.image.save(surface, f"screenshots\\{name}")
+    print(name, "sucessfully saved.")
 
 if __name__ == "__main__":
     pygame.init()

@@ -15,6 +15,7 @@ Nápad jsem ukradl od rekreačního programátora a streamera [Tsoding](https://
  - [x] GUI a přidávání bodů klikáním
  - [x] Lehká optimalizace prvního algoritmu
  - [x] Nastavení (config.ini)
+ - [x] Snímky obrazovky (pomocí stisknutí 'S')
 
  - [ ] Lepší algoritmus
  - [ ] Ukládání výstupu
@@ -32,6 +33,7 @@ Aktualizované odezvy (rozlišení 400x300px):
  * První bod  -> cca 1 ms
  * Druhý bod  -> cca 450 ms
  * Další body -> cca 300 ms
+
 
 ## Provedení
 Prozatimní plán je vytvořit jednoduchou aplikaci v [Pythonu](https://www.python.org) 
@@ -53,7 +55,7 @@ Programováno na Windows 10.
 ```
 python main.py
 ```
-
+Zmáčkuntím 'S' uložíte snímek obrazovky do složky screenshots.
 
 # English
 
@@ -70,6 +72,7 @@ Idea stolen from recreational programmer and streamer [Tsoding](https://www.yout
  - [x] GUI and adding points by clicking
  - [x] Slight optimalization of algorithm
  - [x] Settings (config.ini)
+ - [x] Screenshots (by pressing 'S')
 
  - [ ] Better algorithms
  - [ ] Output saving
@@ -110,6 +113,7 @@ Coded on Windows 10.
 ```
 python main.py
 ```
+Press 'S' to save a screenshot to the screenshots folder.
 
 # Ukázky / screenshots
 

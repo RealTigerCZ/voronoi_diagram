@@ -89,11 +89,7 @@ def generate_surface_buffering(last: pygame.Surface) -> pygame.Surface:
                 last.set_at(it.multi_index, point.c)
 
     return last
-                
-      
-            
-        
-        
+
 
 def add_point(x:int, y:int):
     r = random.randint(0, 255)
